@@ -23,4 +23,8 @@ public func configure(
     var migrations = MigrationConfig()
     migrations.add(model: User.self, database: .psql)
     services.register(migrations)
+    
+    var commands = CommandConfig.default()
+    commands.useFluentCommands()
+    services.register(commands)
 }
