@@ -16,7 +16,7 @@ public func configure(
     services.register(middlewares)
     
     var databases = DatabasesConfig()
-    let config = PostgreSQLDatabaseConfig(hostname: "localhost", username: "davidbuhauer", database: "chatter")
+    let config = PostgreSQLDatabaseConfig(hostname: "chatter.vapor.cloud", username: "davidbuhauer", database: "chatter")
     databases.add(database: PostgreSQLDatabase(config: config), as: .psql)
     services.register(databases)
     
